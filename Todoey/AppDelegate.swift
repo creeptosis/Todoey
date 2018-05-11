@@ -15,8 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // BAR BG COLOR
+        UINavigationBar.appearance().barTintColor = UIColor.twitterBlue
+        
+        // BACK BTN COLOR / self.title of previous page (e.g <Homepage)
+        //*TIP: set previous page title to an empty String to get just the back button "<"
+        UINavigationBar.appearance().tintColor = .yellow
+        
+        // CENTER TITLE COLOR
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         return true
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
